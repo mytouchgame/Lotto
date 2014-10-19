@@ -23,7 +23,7 @@
 	<!-- preference name="stay-in-webview" value="true" /  -->
 	<preference name="android-installLocation" value="auto" />
   <gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
-  <gap:plugin name="com.phonegap.plugins.childbrowser" version="5.0.0" />  
+  <!-- gap:plugin name="com.phonegap.plugins.childbrowser" version="5.0.0" /-->  
   
 
 	<access origin="*.*" /> 
