@@ -10,17 +10,17 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />        
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <meta name="google-site-verification" content="3JVVWx19nxeBNgLuEv8h9jSF7C5xL6sk_VRaTZaGxsA" />
-  <META HTTP-EQUIV=”pragm” CONTENT=”no-cache”>
-  <META HTTP-EQUIV=”Cache-Control” CONTENT=”no-cache, must-revalidate”>
-  <META HTTP-EQUIV=”expires” CONTENT=”0″>
- 
-	<link href="css/styles.css" rel="stylesheet" type="text/css" /> 
+  <META HTTP-EQUIV="pragm" CONTENT="no-cache">
+  <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+  <META HTTP-EQUIV="expires" CONTENT="0">
 
-	<script type="text/javascript" src="SwitchMenu.js"></script>
-  <script type="text/javascript" language="JavaScript" src="langConvert.js"></script>
-  <script src="phonegap.js"></script>  
-  
-    <SCRIPT language="JavaScript">
+ 	<link rel="shortcut" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="jquery.mobile-1.3.1.css" />
+  <script src="jquery-1.7.2.min.js"></script>
+  <script src="jquery.mobile-1.3.1.js"></script>
+  <script src="phonegap.js"></script>
+  <script src="resize.js"></script>
+      <SCRIPT language="JavaScript">
     <!--
     function go_there()
        {
@@ -33,171 +33,173 @@
         }
     //-->
   </SCRIPT>
-
-  <script type="text/javascript">
-   var _gaq = _gaq || [];
-   _gaq.push(['_setAccount', 'UA-32992995-1']);
-   _gaq.push(['_setDomainName', 'i-favorites.net']);
-   _gaq.push(['_trackPageview']);
-
-   (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-   </script>
+  
 
 </head>
 <body>
-<!-- Keep all menus within masterdiv-->
-<div id="masterdiv">
 
-<div class="top">
-          <h2>台灣彩券王</h2>
-</div>
+<!-- Home 台彩 -->
+<div data-role="page" id="home" data-theme="e">
 
-	
-<div class="content" style="background: #fefcea; /* Old browsers */
-background: -moz-linear-gradient(top,  #fefcea 0%, #f1da36 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefcea), color-stop(100%,#f1da36)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #fefcea 0%,#f1da36 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #fefcea 0%,#f1da36 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #fefcea 0%,#f1da36 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #fefcea 0%,#f1da36 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=0 ); /* IE6-9 */
-">
-
-<div class="contenu">
-
-    <div style="margin-top:5px">
-        <center><h3 style="color: red;">祝您中大獎！</h3></center>
+	<div data-role="header" data-position="fixed" data-theme="b">
+		<h3>台灣彩券王</h3>
+    <div data-role="navbar" data-iconpos="top">
+        <ul>
+                <li><a href="#home" data-icon="home" data-iconpos="bottom">台彩</a></li>
+                <li><a href="#sport" data-icon="star" data-iconpos="bottom">運彩</a></li>              
+                <li><a href="#invoice" data-icon="grid" data-iconpos="bottom">發票</a></li>              
+                <li><a href="#other" data-icon="info" data-iconpos="bottom">其他</a></li>              
+        </ul>            
     </div>
+	</div> 
 
-<!-- 
-<div style="height:10px;"></div>
-<div class="menutitle arrow" target="_blank" onclick="window.open('http://i-Favorites.net/Lotto/lotto_bonus.php','_blank','location=no')">威力彩、大樂透 頭獎預估金額</div>
-<div style="height:10px;"></div>
-<div class="menutitle arrow" target="_blank" onclick="window.open('http://i-Favorites.net/Lotto/latest.php','_blank','location=no')">台灣彩券最新開獎結果</div>
-<div style="height:10px;"></div>
-<div class="menutitle arrow" target="_blank" onclick="window.open('http://i-Favorites.net/Lotto/watch.php','_blank','location=no')">開獎直播（57彩券王）</div>
-<div style="height:10px;"></div>
-<div class="menutitle menudown" onclick="SwitchMenu('sub1')">近10期彩券獎金、獎號查詢</div>
-          <span class="submenu" id="sub1">
-          <a class="subbutton" target="_blank" onclick="window.open('http://i-Favorites.net/Lotto/superlotto.php','_blank','location=no')">威力彩/38樂合彩</a>
-          <a class="subbutton" target="_blank" onclick="window.open('http://i-Favorites.net/Lotto/lotto649.php','_blank','location=no')">大樂透/49樂合彩</a>
-          <a class="subbutton" target="_blank" onclick="window.open('http://i-Favorites.net/Lotto/daily539.php','_blank','location=no')">今彩539/39樂合彩</a>
-          <a class="subbutton" target="_blank" onclick="window.open('http://i-Favorites.net/Lotto/4star.php','_blank','location=no')">四星彩</a>
-          <a class="subbutton" target="_blank" onclick="window.open('http://i-Favorites.net/Lotto/3star.php','_blank','location=no')">三星彩</a>
-          </span>
-<div style="height:10px;"></div>
-<div class="menutitle menudown" onclick="SwitchMenu('sub2')">運動彩券情報分析</div>
-          <span class="submenu" id="sub2">
-          <P align=center>
-          <a class="subbutton" onclick="window.open('http://i-Favorites.net/Lotto/snews-apple.php','_blank','location=no')">蘋果日報》運彩分析</a>
-          <a class="subbutton" onclick="window.open('http://i-Favorites.net/Lotto/snews-udn.php','_blank','location=no')">聯合新聞網》運彩新聞</a>
-          <a class="subbutton" onclick="window.open('http://i-Favorites.net/Lotto/snews-basketball.php','_blank','location=no')">台灣運彩》焦點賽事(籃球)</a>
-          <a class="subbutton" onclick="window.open('http://i-Favorites.net/Lotto/snews-baseball.php','_blank','location=no')">台灣運彩》焦點賽事(棒球)</a>
-          <a class="subbutton" onclick="window.open('http://i-Favorites.net/Lotto/snews-football.php','_blank','location=no')">台灣運彩》焦點賽事(足球)</a>
-          <a class="subbutton" onclick="window.open('http://i-Favorites.net/Lotto/snews-tennis.php','_blank','location=no')">台灣運彩》焦點賽事(網球)</a>
-          </P>       
-          </span>
-<div style="height:10px;"></div>
-<div class="menutitle menudown" onclick="SwitchMenu('sub3')">統一發票開獎結果</div>
-          <span class="submenu" id="sub3">
-          <P align=center>
-          <a class="subbutton" target="_blank" onclick="window.open('http://i-Favorites.net/Lotto/invoice-new.php','_blank','location=no')">最新統一發票中獎號碼</a>
-          <a class="subbutton" target="_blank" onclick="window.open('http://i-Favorites.net/Lotto/invoice-prev.php','_blank','location=no')">上期統一發票中獎號碼</a>
-          </P>
-          </span>
-<div style="height:10px;"></div>
-<div class="menutitle rightarrow" target="_blank" onclick="window.open('http://i-favorites.net','_system','location=yes')" style="background-color:#693837; border-color:#000; color:#fff;">i-Favorites.net 首頁</div>
-<div style="height:15px;"></div>
--->
+   	<div data-role="header" data-theme="e">
+     <h3>台灣彩券情報</h3>
+    </div>
+  
+	<div data-role="content">
+         
+   <ul data-role="listview" data-inset="true">
+      <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/lotto_bonus.php', { showLocationBar  : false });">威力彩、大樂透 頭獎預估金額</a></li>
+   </ul>
 
-<div class="menutitle arrow" target="_blank" onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/lotto_bonus.php', { showLocationBar  : false });">威力彩、大樂透 頭獎預估金額</div>
-<div style="height:10px;"></div>
-<div class="menutitle arrow" target="_blank" onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/latest.php', { showLocationBar  : false });">台灣彩券最新開獎結果</div>
-<div style="height:10px;"></div>
-<div class="menutitle arrow" target="_blank" onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/watch.php', { showLocationBar  : false });">開獎直播（57彩券王）</div>
-<div style="height:10px;"></div>
-<div class="menutitle menudown" onclick="SwitchMenu('sub1')">近10期彩券獎金、獎號查詢</div>
-          <span class="submenu" id="sub1">
-          <a class="subbutton" target="_blank" onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/superlotto.php', { showLocationBar  : false });">威力彩/38樂合彩</a>
-          <a class="subbutton" target="_blank" onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/lotto649.php', { showLocationBar  : false });">大樂透/49樂合彩</a>
-          <a class="subbutton" target="_blank" onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/daily539.php', { showLocationBar  : false });">今彩539/39樂合彩</a>
-          <a class="subbutton" target="_blank" onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/4star.php', { showLocationBar  : false });">四星彩</a>
-          <a class="subbutton" target="_blank" onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/3star.php', { showLocationBar  : false });">三星彩</a>
-          </span>
-<div style="height:10px;"></div>
-<div class="menutitle menudown" onclick="SwitchMenu('sub2')">運動彩券情報分析</div>
-          <span class="submenu" id="sub2">
-          <P align=center>
-          <a class="subbutton" onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/snews-apple.php','_blank','location=yes')">蘋果日報》運彩分析</a>
-          <a class="subbutton" onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/snews-udn.php', { showLocationBar  : false });">聯合新聞網》運彩新聞</a>
-          <a class="subbutton" onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/snews-basketball.php', { showLocationBar  : false });">台灣運彩》焦點賽事(籃球)</a>
-          <a class="subbutton" onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/snews-baseball.php', { showLocationBar  : false });">台灣運彩》焦點賽事(棒球)</a>
-          <a class="subbutton" onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/snews-football.php', { showLocationBar  : false });">台灣運彩》焦點賽事(足球)</a>
-          <a class="subbutton" onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/snews-tennis.php', { showLocationBar  : false });">台灣運彩》焦點賽事(網球)</a>
-          </P>       
-          </span>
-<div style="height:10px;"></div>
-<div class="menutitle menudown" onclick="SwitchMenu('sub3')">統一發票開獎結果</div>
-          <span class="submenu" id="sub3">
-          <P align=center>
-          <a class="subbutton" target="_blank" onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/invoice-new.php', { showLocationBar  : false });">最新統一發票中獎號碼</a>
-          <a class="subbutton" target="_blank" onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/invoice-prev.php', { showLocationBar  : false });">上期統一發票中獎號碼</a>
-          </P>
-          </span>
+   <ul data-role="listview" data-inset="true">
+      <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/latest.php', { showLocationBar  : false });">台灣彩券最新開獎結果</a></li>
+   </ul>
 
-<div style="height:10px;"></div>
-<div class="menutitle rightarrow" target="_blank" onclick="window.plugins.ChildBrowser.showWebPage('http://i-favorites.net', { showLocationBar  : true });" style="background-color:#693837; border-color:#000; color:#fff;">i-Favorites.net 首頁</div>
-<div style="height:15px;"></div>
-        <center><h4>彩券.樂透.發票開獎號碼查詢</h4></center>
+   <ul data-role="listview" data-inset="true">
+      <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/watch.php', { showLocationBar  : false });">開獎直播（57彩券王）</a></li>
+   </ul>
 
-
-
-
-
-
-
-</div>
-</div>
-</div>
-			
-<style>
-.nav ul {
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-}
-.nav li {
-    display: inline;
-    float: right;
-    width:46%;
-    height: 30px;
-    border-width:0 2px 0 0;
-    border-style:outset; 
-}   
-
-ul li a{
-    float:center;
-    display:block;
-    text-decoration:none;
-    font-size:15px;   font-weight: bold;   color:#ffffff;
-    padding:10px 0 40px 0;
+    <div data-role="collapsible" data-theme="e" data-content-theme="e">
+        <h3>近10期彩券獎金、獎號查詢</h3>
+        <ul data-role="listview" data-theme="c">
+          <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/superlotto.php', { showLocationBar  : false });">威力彩/38樂合彩</a></li>
+          <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/lotto649.php', { showLocationBar  : false });">大樂透/49樂合彩</a></li>
+          <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/daily539.php', { showLocationBar  : false });">今彩539/39樂合彩</a></li>
+          <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/4star.php', { showLocationBar  : false });">四星彩</a></li>
+          <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/3star.php', { showLocationBar  : false });">三星彩</a></li>
+        </ul>
+    </div>                  
+                  
     
-}
+    <center>
+    <a onclick="go_there();" data-role="button" data-inline="true" data-theme="a">離開</a>
+    
+  </div>
+
+	<div data-role="footer" data-position="fixed" data-theme="b">
+  <center>  <a target="_blank" onclick="window.open('http://i-Favorites.net','_system','location=yes')" data-ajax="false">Copyright© i-Favorites.net</a></center>
+  </div> 
+
+   
+</div>  
+
+<!-- 運彩 -->
+<div data-role="page" id="sport" data-theme="e">
+
+	<div data-role="header" data-position="fixed" data-theme="b">
+		<h3>台灣彩券王</h3>
+    <div data-role="navbar" data-iconpos="top">
+        <ul>
+                <li><a href="#home" data-icon="home" data-iconpos="bottom">台彩</a></li>
+                <li><a href="#sport" data-icon="star" data-iconpos="bottom">運彩</a></li>              
+                <li><a href="#invoice" data-icon="grid" data-iconpos="bottom">發票</a></li>              
+                <li><a href="#other" data-icon="info" data-iconpos="bottom">其他</a></li>              
+        </ul>            
+    </div>
+	</div> 
+
+   	<div data-role="header" data-theme="e">
+     <h3>運動彩券情報</h3>
+    </div>
+  
+  
+	<div data-role="content">
+      
+        <ul data-role="listview" data-theme="e" data-inset="true">
+          <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/snews-apple.php','_blank','location=yes')">蘋果日報》運彩分析</a></li>
+          <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/snews-udn.php', { showLocationBar  : false });">聯合新聞網》運彩新聞</a></li>
+          <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/snews-basketball.php', { showLocationBar  : false });">台灣運彩》焦點賽事(籃球)</a></li>
+          <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/snews-baseball.php', { showLocationBar  : false });">台灣運彩》焦點賽事(棒球)</a></li>
+          <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/snews-football.php', { showLocationBar  : false });">台灣運彩》焦點賽事(足球)</a></li>
+          <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/snews-tennis.php', { showLocationBar  : false });">台灣運彩》焦點賽事(網球)</a></li>
+        </ul>
+
+  </div>
+
+  <iframe src="http://i-Favorites.net/MB/ForAPP/about.html" style="position:fixed; bottom:0px; border:0; width:100%; height:45px" scrolling="no"></iframe>
+ 
+</div>  
+
+<!-- 發票 -->
+<div data-role="page" id="invoice" data-theme="e">
+
+	<div data-role="header" data-position="fixed" data-theme="b">
+		<h3>台灣彩券王</h3>
+    <div data-role="navbar" data-iconpos="top">
+        <ul>
+                <li><a href="#home" data-icon="home" data-iconpos="bottom">台彩</a></li>
+                <li><a href="#sport" data-icon="star" data-iconpos="bottom">運彩</a></li>              
+                <li><a href="#invoice" data-icon="grid" data-iconpos="bottom">發票</a></li>              
+                <li><a href="#other" data-icon="info" data-iconpos="bottom">其他</a></li>              
+        </ul>            
+    </div>
+	</div> 
+
+   	<div data-role="header" data-theme="e">
+     <h3>統一發票獎號查詢</h3>
+    </div>
+  
+  
+	<div data-role="content">
+      
+        <ul data-role="listview" data-theme="e" data-inset="true">
+          <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/invoice-new.php', { showLocationBar  : false });">最新統一發票中獎號碼</a></li>
+          <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/invoice-prev.php', { showLocationBar  : false });">上期統一發票中獎號碼</a></li>
+        </ul>
+
+  </div>
+
+  <iframe src="http://i-Favorites.net/MB/ForAPP/about.html" style="position:fixed; bottom:0px; border:0; width:100%; height:45px" scrolling="no"></iframe>
+ 
+</div>  
 
 
-</style>			
+<!-- 其他 -->
+<div data-role="page" id="other" data-theme="e">
 
-<div class="nav" style="position:fixed; bottom:0px; left:0px; z-index:99; width:100%;background-color:#000000; text-align:center;" >
-<ul>
-<li style="background-color:#000000; background-image:url(images/button5.png); background-repeat: no-repeat; background-position: center bottom; " onclick="go_there();">　</li>
-<li style="background-color:#000000; background-image:url(images/button1.png); background-repeat: no-repeat; background-position: center bottom; " onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/about.html', { showLocationBar  : false });">　</li>
-</ul>
-</div>	
+	<div data-role="header" data-position="fixed" data-theme="b">
+		<h3>台灣彩券王</h3>
+    <div data-role="navbar" data-iconpos="top">
+        <ul>
+                <li><a href="#home" data-icon="home" data-iconpos="bottom">台彩</a></li>
+                <li><a href="#sport" data-icon="star" data-iconpos="bottom">運彩</a></li>              
+                <li><a href="#invoice" data-icon="grid" data-iconpos="bottom">發票</a></li>              
+                <li><a href="#other" data-icon="info" data-iconpos="bottom">其他</a></li>              
+        </ul>            
+    </div>
+	</div> 
+
+   	<div data-role="header" data-theme="e">
+     <h3>其他</h3>
+    </div>
+  
+	<div data-role="content">
+
+        <ul data-role="listview" data-theme="c" data-inset="true">
+         <li><a target="_blank" onclick="window.open('https://play.google.com/store/apps/developer?id=i-Favorites.net','_system','location=yes')" data-icon="grid" data-theme="d" data-transition="pop" data-ajax="false">更多好用的APP</a></li>                  
+         <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/about.html" data-icon="info" data-theme="d" data-transition="pop" data-ajax="false">關於我們</a></li>                  
+        </ul>
+       
+          
+	</div>
+
+  <iframe src="http://i-Favorites.net/MB/ForAPP/about.html" style="position:fixed; bottom:0px; border:0; width:100%; height:45px" scrolling="no"></iframe>
+  
+</div>  
 
 
+   
 </body>
 </html>
