@@ -89,7 +89,7 @@
   </div>
 
 	<div data-role="footer" data-position="fixed" data-theme="b">
-  <center>  <a target="_blank" onclick="window.open('http://i-Favorites.net','_system','location=yes')" data-ajax="false">Copyright© i-Favorites.net</a></center>
+  <center>  <a target="_blank" onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net',, { showLocationBar  : true });">Copyright© i-Favorites.net</a></center>
   </div> 
 
    
@@ -116,10 +116,16 @@
   
   
 	<div data-role="content">
+  
+   <ul data-role="listview" data-inset="true">
+      <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/snews-apple.php','_blank','location=yes')">蘋果日報》運彩分析</a></li>
+   </ul>
+
+   <ul data-role="listview" data-inset="true">
+      <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/snews-udn.php', { showLocationBar  : false });">聯合新聞網》運彩新聞</a></li>
+   </ul>
       
         <ul data-role="listview" data-theme="e" data-inset="true">
-          <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/snews-apple.php','_blank','location=yes')">蘋果日報》運彩分析</a></li>
-          <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/snews-udn.php', { showLocationBar  : false });">聯合新聞網》運彩新聞</a></li>
           <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/snews-basketball.php', { showLocationBar  : false });">台灣運彩》焦點賽事(籃球)</a></li>
           <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/snews-baseball.php', { showLocationBar  : false });">台灣運彩》焦點賽事(棒球)</a></li>
           <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/snews-football.php', { showLocationBar  : false });">台灣運彩》焦點賽事(足球)</a></li>
@@ -154,10 +160,13 @@
   
 	<div data-role="content">
       
-        <ul data-role="listview" data-theme="e" data-inset="true">
+    <ul data-role="listview" data-inset="true">
           <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/invoice-new.php', { showLocationBar  : false });">最新統一發票中獎號碼</a></li>
-          <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/invoice-prev.php', { showLocationBar  : false });">上期統一發票中獎號碼</a></li>
-        </ul>
+    </ul>
+
+    <ul data-role="listview" data-inset="true">
+         <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/invoice-prev.php', { showLocationBar  : false });">上期統一發票中獎號碼</a></li>
+    </ul>
 
   </div>
 
@@ -187,10 +196,17 @@
   
 	<div data-role="content">
 
-        <ul data-role="listview" data-theme="c" data-inset="true">
-         <li><a target="_blank" onclick="window.open('https://play.google.com/store/apps/developer?id=i-Favorites.net','_system','location=yes')" data-icon="grid" data-theme="d" data-transition="pop" data-ajax="false">更多好用的APP</a></li>                  
-         <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/about.html" data-icon="info" data-theme="d" data-transition="pop" data-ajax="false">關於我們</a></li>                  
-        </ul>
+    <ul data-role="listview" data-inset="true">
+         <li><a onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net/Lotto/about.html',, { showLocationBar  : false });">關於我們</a></li>                  
+    </ul>
+
+    <ul data-role="listview" data-inset="true">
+         <li><a target="_blank" onclick="window.plugins.ChildBrowser.showWebPage('https://play.google.com/store/apps/developer?id=i-Favorites.net')">更多好用的APP</a></li>                  
+    </ul>
+
+    <ul data-role="listview" data-inset="true">
+         <li><a target="_blank" onclick="window.plugins.ChildBrowser.showWebPage('http://i-Favorites.net',, { showLocationBar  : true });">台灣最佳手機入口網站</a>
+    </ul>
        
           
 	</div>
